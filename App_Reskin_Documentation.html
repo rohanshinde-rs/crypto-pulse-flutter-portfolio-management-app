@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Reskin Documentation</title>
+</head>
+<body>
+    <h1>App Reskin Documentation</h1>
+    <p>This guide provides step-by-step instructions to reskin the "Crypto Pulse" Flutter application. The app is built using Flutter and supports both Android and iOS platforms.</p>
+    <hr>
+    <h2>1. Understanding the Current App Structure</h2>
+    <p>The app is a cryptocurrency portfolio manager built with Flutter. It uses:</p>
+    <ul>
+        <li><strong>Hive</strong> for local storage.</li>
+        <li><strong>Pie Chart</strong> package for graphical representation.</li>
+        <li><strong>Material Design</strong> for UI components.</li>
+    </ul>
+    <p>Key files and functions:</p>
+    <ul>
+        <li><strong>Main App</strong> (<code>main()</code>): Initializes Hive and sets up the app.</li>
+        <li><strong>PortfolioScreen</strong>: The main screen, displaying the portfolio and pie chart.</li>
+        <li><strong>Crypto Model</strong>: Represents individual cryptocurrency entries.</li>
+    </ul>
+    <hr>
+    <h2>2. Planning the Reskin</h2>
+    <p>Reskinning involves modifying:</p>
+    <ul>
+        <li><strong>UI Design</strong>: Colors, fonts, themes.</li>
+        <li><strong>Branding</strong>: App name, icon, and splash screen.</li>
+        <li><strong>Assets</strong>: Images, fonts, and other visual elements.</li>
+    </ul>
+    <hr>
+    <h2>3. Steps to Reskin the App</h2>
+    <h3>Step 1: Update the App Name</h3>
+    <p>1. Open <code>android/app/src/main/AndroidManifest.xml</code> for Android.</p>
+    <p>2. Modify the <code>&lt;application&gt;</code> tag:</p>
+    <pre><code>&lt;application
+    android:label="New App Name"
+    ... &gt;
+    </code></pre>
+    <p>3. For iOS, edit <code>ios/Runner/Info.plist</code>:</p>
+    <pre><code>&lt;key&gt;CFBundleName&lt;/key&gt;
+    &lt;string&gt;New App Name&lt;/string&gt;
+    </code></pre>
+    <h3>Step 2: Change the App Icon</h3>
+    <p>1. Replace the default icon using a tool like <a href="https://appicon.co/">App Icon Generator</a>.</p>
+    <p>2. Place the generated icons in the respective platform directories:</p>
+    <ul>
+        <li><strong>Android</strong>: <code>android/app/src/main/res/mipmap-*</code></li>
+        <li><strong>iOS</strong>: <code>ios/Runner/Assets.xcassets/AppIcon.appiconset</code></li>
+    </ul>
+    <h3>Step 3: Modify the Splash Screen</h3>
+    <p>1. For Android, update the splash screen in <code>android/app/src/main/res/drawable/launch_background.xml</code>.</p>
+    <p>2. For iOS, modify the <code>LaunchScreen.storyboard</code> file in <code>ios/Runner/Base.lproj</code>.</p>
+    <!-- Additional steps are omitted for brevity -->
+    <hr>
+    <h2>4. Testing the Reskinned App</h2>
+    <p>1. Run the app on Android and iOS emulators and real devices to ensure:</p>
+    <ul>
+        <li>The UI matches the new design.</li>
+        <li>There are no broken assets or layout issues.</li>
+    </ul>
+    <p>2. Check the functionality of:</p>
+    <ul>
+        <li>Adding, editing, and deleting cryptocurrencies.</li>
+        <li>Pie chart display and interactions.</li>
+        <li>Multi-currency support.</li>
+    </ul>
+    <hr>
+    <h2>5. Build and Release</h2>
+    <p>1. Build the app for Android and iOS:</p>
+    <ul>
+        <li>Android: <code>flutter build apk</code></li>
+        <li>iOS: <code>flutter build ios</code></li>
+    </ul>
+    <p>2. Test the builds on actual devices.</p>
+    <p>3. Submit the app to the respective app stores:</p>
+    <ul>
+        <li><strong>Google Play Store</strong> for Android.</li>
+        <li><strong>Apple App Store</strong> for iOS.</li>
+    </ul>
+    <hr>
+    <h2>Conclusion</h2>
+    <p>Following these steps ensures a complete reskin of the "Crypto Pulse" app for both Android and iOS platforms. Adjustments can be made to align with branding and design requirements. Happy coding!</p>
+</body>
+</html>
